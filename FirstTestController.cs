@@ -11,7 +11,7 @@ namespace First_Level_Test.Controllers
 {
     public class FirstTestController : Controller
     {
-       
+       /*this is sachin demo */
         string CNNSTR = "Data Source=MYPC-PC;Initial Catalog=dd_SDTest;Integrated Security=True";
         SqlConnection CNN;
         SqlCommand CMD;
