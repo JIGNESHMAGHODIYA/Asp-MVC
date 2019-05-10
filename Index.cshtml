@@ -1,0 +1,43 @@
+﻿@model System.Data.DataTable
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<center>
+<table border="1" style="width:70%;background-color:#57c4ed;color:white;font-size:22px">
+    <tr>
+        <td colspan="7" align="center" vilign="center">
+        <h1>Display All Data</h1>
+        </td>    
+    </tr>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>Email ID</th>
+        <th> Edit </th>
+        <th> Delete </th>
+    </tr>
+    @for (int i = 0; i < Model.Rows.Count; i++)
+    {
+        <tr>
+            <td align="center" vilign="center">@Model.Rows[i][0]</td>
+            <td align="center" vilign="center">@Model.Rows[i][1]</td>
+            <td align="center" vilign="center">@Model.Rows[i][2]</td>
+            <td align="center" vilign="center">@Model.Rows[i][3]</td>
+            <td align="center" vilign="center">@Model.Rows[i][4]</td>
+            <td align="center" vilign="center"><a href="@Url.Action("Edit", "FirstTest", new {@id=@Model.Rows[i][0]})">Edit</a></td>
+            <td align="center" vilign="center"><a href="@Url.Action("Delete","FirstTest",new {@id=@Model.Rows[i][0]})">Delete</a></td>
+        </tr>
+    }
+</table>
+    <br />
+    <a href="@Url.Action("Create","FirstTest")"> Add New Recode <//a>
+
+    <br />
+
+<center>
+
+
